@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "SF Pro Display", sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(135deg, #1c1c1e, #2c2c2e);
+    position: relative;
+    border-bottom: 1px solid #3a3a3c;
+}
+
+.lamp {
+    width: 40px;
+    height: 40px;
+    background: url('lamp-off.png') no-repeat center;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.lamp.on {
+    background: url('lamp-on.png') no-repeat center;
+    transform: rotate(15deg);
+}
+
+.lamp:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: #f5f5f7;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    color: #86868b;
+    font-weight: 400;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+.nav-logo {
+    width: 50px;
+    height: 50px;
+    background: #2c2c2e;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #34c759;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(52, 199, 89, 0.5);
+}
+
+.nav-logo[data-section="#about"] i { content: "\f007"; } /* fa-user */
+.nav-logo[data-section="#projects"] i { content: "\f07c"; } /* fa-folder */
+.nav-logo[data-section="#skills"] i { content: "\f0ad"; } /* fa-tools */
+.nav-logo[data-section="#contact"] i { content: "\f0e0"; } /* fa-envelope */
+
+.section {
+    padding: 40px 0;
+    background: #1c1c1e;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, opacity 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #f5f5f7;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.photo-section {
+    text-align: center;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.profile-photo {
+    width: 250px; /* Increased from 200px */
+    height: 250px; /* Increased from 200px */
+    border-radius: 15px;
+    object-fit: cover;
+    border: 4px solid #34c759;
+}
+
+p {
+    font-size: 1.1em;
+    color: #86868b;
+    max-width: 800px;
+    margin: 0 auto 15px;
+    text-align: center;
+}
+
+.education-grid,
+.project-grid,
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.education-card,
+.project-card,
+.skill-item {
+    background: #2c2c2e;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-card:hover,
+.project-card:hover,
+.skill-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.education-card h3 {
+    color: #f5f5f7;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.education-card p {
+    color: #86868b;
+    font-size: 1.1em;
+}
+
+.project-card h3 a {
+    color: #f5f5f7;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.project-card h3 a:hover {
+    color: #34c759;
+}
+
+.skill-item {
+    background: #3a3a3c;
+    color: #34c759;
+    font-weight: 600;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+.skill-item i {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.skill-item img.software-logo {
+    width: 2em;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.skill-name {
+    font-size: 0.8em;
+    color: #86868b;
+}
+
+.contact a {
+    color: #34c759;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.contact a:hover {
+    color: #30d158;
+    text-shadow: 0 0 10px #30d158;
+}
+
+.contact a i {
+    margin-right: 5px;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(52, 199, 89, 0.1) 1px, transparent 1px);
+    background-size: 15px 15px;
+    z-index: -1;
+    animation: starPulse 12s infinite linear;
+}
+
+@keyframes starPulse {
+    0% { opacity: 0.3; }
+    to { opacity: 0.7; }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    .lamp {
+        top: 10px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    .nav-logo {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+
+    .section {
+        padding: 20px 0;
+        margin: 15px 0;
+    }
+
+    .photo-section {
+        padding: 10px 0;
+    }
+
+    .profile-photo {
+        width: 200px; /* Increased from 160px */
+        height: 200px; /* Increased from 160px */
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .education-grid,
+    .project-grid,
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card,
+    .project-card,
+    .skill-item {
+        padding: 15px;
+    }
+
+    .education-card h3,
+    .project-card h3 a {
+        font-size: 1.2em;
+    }
+
+    .education-card p,
+    .project-card p {
+        font-size: 0.9em;
+    }
+
+    .skill-item i,
+    .skill-item img.software-logo {
+        font-size: 1.5em;
+    }
+
+    .skill-name {
+        font-size: 0.7em;
+    }
+
+    .contact a {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li {
+        margin: 0 3px;
+    }
+
+    .nav-logo {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .profile-photo {
+        width: 160px; /* Increased from 130px */
+        height: 160px; /* Increased from 130px */
+    }
+
+    .skill-item {
+        padding: 10px;
+    }
+}

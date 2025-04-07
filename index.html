@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav V K - Data Analytics Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="lamp" id="lamp" onclick="toggleLamp()"></div>
+            <h1>Pranav V K</h1>
+            <p class="subtitle">Data Analytics Enthusiast</p>
+            <nav>
+                <ul>
+                    <li><div class="nav-logo" data-section="#about"><i class="fas fa-user"></i></div></li>
+                    <li><div class="nav-logo" data-section="#projects"><i class="fas fa-folder"></i></div></li>
+                    <li><div class="nav-logo" data-section="#skills"><i class="fas fa-tools"></i></div></li>
+                    <li><div class="nav-logo" data-section="#contact"><i class="fas fa-envelope"></i></div></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="photo-section">
+            <img src="IMG_20250112_173451~2.jpg" alt="Pranav V K" class="profile-photo">
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Passionate about transforming raw data into actionable insights using Python, Excel, and visualization tools. I thrive on solving real-world problems and continuously expanding my analytical skills through hands-on projects.</p>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>B.Voc in Business Process and Data Analytics</h3>
+                    <p>Bharathiar University, Coimbatore | Expected Graduation: 2026</p>
+                </div>
+                <div class="education-card">
+                    <h3>Bachelor of Computer Applications (Correspondence)</h3>
+                    <p>University of Madras | Expected Graduation: 2025</p>
+                </div>
+                <div class="education-card">
+                    <h3>HSC - 90% | SSLC - 87%</h3>
+                    <p>Swami Shivanand Higher Secondary School</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3><a href="https://github.com/pranav-v-k/scrapy-web-scraping/tree/main/Stephen%20Hawking%20Books" target="_blank">Web Scraping Project</a></h3>
+                    <p>Developed a Python-based scraper with Scrapy to analyze Stephen Hawking’s book data from Amazon India, focusing on pricing and ratings trends.</p>
+                </div>
+                <div class="project-card">
+                    <h3><a href="https://github.com/pranav-v-k/world-population-2020" target="_blank">Data Visualization: 2020 World Population</a></h3>
+                    <p>Created visualizations with Python (Pandas, Seaborn) to explore global population trends, delivering key demographic insights.</p>
+                </div>
+                <div class="project-card">
+                    <h3><a href="https://github.com/pranav-v-k/WebDev-Build.itBreak.it" target="_blank">WebDev - Build.itBreak.it</a></h3>
+                    <p>Designed a model webpage after learning HTML and CSS, showcasing my foundational web development skills.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="skill-grid">
+                <div class="skill-item"><i class="fab fa-python"></i><br><span class="skill-name">Python</span></div>
+                <div class="skill-item"><i class="fas fa-table"></i><br><span class="skill-name">Excel Data Analytics</span></div>
+                <div class="skill-item"><i class="fab fa-html5"></i><br><span class="skill-name">HTML/CSS</span></div>
+                <div class="skill-item"><i class="fab fa-microsoft"></i><br><span class="skill-name">Microsoft Office</span></div>
+                <div class="skill-item"><i class="fas fa-bullhorn"></i><br><span class="skill-name">Digital Marketing</span></div>
+                <div class="skill-item"><i class="fas fa-comments"></i><br><span class="skill-name">Communication</span></div>
+            </div>
+        </section>
+
+        <section id="softwares" class="section">
+            <h2>Softwares Known</h2>
+            <div class="skill-grid">
+                <div class="skill-item"><i class="fab fa-microsoft"></i><br><span class="skill-name">MS Excel</span></div>
+                <div class="skill-item"><i class="fab fa-python"></i><br><span class="skill-name">Python Dashboard</span></div>
+                <div class="skill-item"><i class="fas fa-microphone"></i><br><span class="skill-name">Audacity</span></div>
+                <div class="skill-item"><img src="https://images.icon-icons.com/3660/PNG/512/gimp_logo_editor_open_source_photography_icon_228466.png" alt="GIMP" class="software-logo"><br><span class="skill-name">GIMP</span></div>
+                <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Calligrakrita-base.svg" alt="Krita" class="software-logo"><br><span class="skill-name">Krita</span></div>
+                <div class="skill-item"><i class="fab fa-linux"></i><br><span class="skill-name">Linux</span></div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Coimbatore, Tamil Nadu | <a href="mailto:vkpranav26@gmail.com">vkpranav26@gmail.com</a></p>
+            <p>
+                <a href="https://github.com/pranav-v-k" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+                <a href="https://www.linkedin.com/in/pranav-v-k?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
